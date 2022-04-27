@@ -5,7 +5,7 @@
 - 바탕화면에 ‘crawling’ 폴더를 생성하고 파이참으로 실행하였다.
     - visual code로 실행해도 된다.
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\1.png)
+![Untitled](Crawling_Practice/1.png)
 
 - 가상환경을 잡고 라이브러리를 설치한다.
 
@@ -16,11 +16,11 @@ pip install numpy pandas matplotlib seaborn
 pip install requests
 ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\2.png)
+![Untitled](Crawling_Practice/2.png)
 
 - index.html 파일
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\3.png)
+![Untitled](Crawling_Practice/3.png)
 
 - [main.py](http://main.py) 파일
     
@@ -31,7 +31,7 @@ pip install requests
     print(type(soup))
     ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\4.png)
+![Untitled](Crawling_Practice/4.png)
 
 - index.html 파일에 한글이 있어 open() 안에 encoding을 넣어주었다.
 
@@ -39,7 +39,7 @@ pip install requests
 print(soup.find("p"))
 ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\5.png)
+![Untitled](Crawling_Practice/5.png)
 
 - 결과
 
@@ -47,7 +47,7 @@ print(soup.find("p"))
 print(soup.find("div", class_ = "chapter02"))
 ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\6.png)
+![Untitled](Crawling_Practice/6.png)
 
 - 결과
 
@@ -56,7 +56,7 @@ results = soup.find_all("p")
 print(results[1])
 ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\7.png)
+![Untitled](Crawling_Practice/7.png)
 
 - 네이버 접속
 
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     main(url=url)
 ```
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\8.png)
+![Untitled](Crawling_Practice/8.png)
 
 # Beautiful Soup Documentation
 
@@ -93,9 +93,9 @@ This documentation has been translated into other languages by Beautiful Soup us
 
 [Requests: HTTP for Humans™ - Requests 2.27.1 documentation](https://docs.python-requests.org/en/latest/)
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\9.png)
+![Untitled](Crawling_Practice/9.png)
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\10.png)
+![Untitled](Crawling_Practice/10.png)
 
 ```python
 import requests
@@ -130,25 +130,25 @@ if __name__ == "__main__":
 
 - print(soup.find(”a”, class_=”link_loging”)) 로 밑의 결과값이 나온걸 확인.
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\11.png)
+![Untitled](Crawling_Practice/11.png)
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\12.png)
+![Untitled](Crawling_Practice/12.png)
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\13.png)
+![Untitled](Crawling_Practice/13.png)
 
 - find_all() 사용.
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\14.png)
+![Untitled](Crawling_Practice/14.png)
 
 - <a>, class_=”link_news”에 해당하는것은 다 찾아 준다.
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\15.png)
+![Untitled](Crawling_Practice/15.png)
 
 # 벅스에서 크롤링 연습.
 
 - 벅스에서 노래의 제목을 뽑으려고 한다.
 
-![Untitled](C:\Users\home\Desktop\Crawling_Practice\Crawling_Practice\16.png)
+![Untitled](Crawling_Practice/16.png)
 
 - 라이브러리 불러오기
 
@@ -217,8 +217,8 @@ $ python [pratice.py](http://pratice.py/)
 result = []
 for a in title:
    print(a.get_text())
-   result.append(a.get_text().strip('\'))
-# .strip('\') 으로 '\' 를 제거한다.
+   result.append(a.get_text().strip('/'))
+# .strip('/') 으로 '/' 를 제거한다.
 
 df = pd.DataFrame({"music_title": result})
 ```
@@ -265,8 +265,8 @@ def main():
 
     result = []
     for a in title:
-        # print(a.get_text().strip('\n'))
-        result.append(a.get_text().strip('\n'))
+        # print(a.get_text().strip('/n'))
+        result.append(a.get_text().strip('/n'))
 
     df = pd.DataFrame({"music_title": result})
 
